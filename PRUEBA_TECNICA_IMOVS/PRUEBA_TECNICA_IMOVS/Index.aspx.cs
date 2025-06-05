@@ -13,5 +13,15 @@ namespace PRUEBA_TECNICA_IMOVS
         {
 
         }
+
+        protected void btnProducto_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Views/Producto.aspx");
+        }
+
+        protected void btnCotizacion_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Views/Cotizacion.aspx");
+        }
     }
 }
