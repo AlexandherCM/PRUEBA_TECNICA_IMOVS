@@ -1,21 +1,20 @@
-﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
 
 namespace PRUEBA_TECNICA_IMOVS.Models.Entities
 {
-    [Table("EntidadEjemplo")]
-    public class EntidadEjemplo
+    [Table("TipoProducto")]
+    public class TipoProducto
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get; set; }
+        public int Id { get; set; }
 
-        [StringLength(250)]
-        public string Nombre { get; set; }  
-        public int Años { get; set; }
+        [Required]
+        [StringLength(100)]
+        public string Nombre { get; set; }
+
+        public virtual ICollection<Producto> Productos { get; set; }
     }
 }

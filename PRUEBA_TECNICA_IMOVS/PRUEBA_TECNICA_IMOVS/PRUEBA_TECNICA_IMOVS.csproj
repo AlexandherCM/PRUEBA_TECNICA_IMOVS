@@ -105,9 +105,16 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202506061928510_Inicial.cs" />
+    <Compile Include="Migrations\202506061928510_Inicial.Designer.cs">
+      <DependentUpon>202506061928510_Inicial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context.cs" />
-    <Compile Include="Models\Entities\EntidadEjemplo.cs" />
+    <Compile Include="Models\Entities\Cotizacion.cs" />
+    <Compile Include="Models\Entities\CotizacionDetalle.cs" />
+    <Compile Include="Models\Entities\Producto.cs" />
+    <Compile Include="Models\Entities\TipoProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +130,11 @@
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202506061928510_Inicial.resx">
+      <DependentUpon>202506061928510_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
