@@ -24,8 +24,8 @@
         </asp:GridView>
 
         <br />
-        <a class="btn-link" href="Views/AgregarProducto.aspx">Agregar Producto</a>
-        <a class="btn-link" href="Views/Cotizar.aspx">Realizar Cotización</a>
+        <asp:Button ID="btnAgregar" runat="server" Text="Agregar Producto" OnClick="btnAgregar_Click" />
+        <asp:Button ID="btnCotizar" runat="server" Text="Realizar Cotización" OnClick="btnCotizar_Click" />
     </div>
 </form>
 </body>

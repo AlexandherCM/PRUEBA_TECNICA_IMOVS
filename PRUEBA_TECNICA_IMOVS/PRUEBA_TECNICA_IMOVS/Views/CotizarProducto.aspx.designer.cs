@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace PRUEBA_TECNICA_IMOVS
+namespace PRUEBA_TECNICA_IMOVS.Views
 {
 
 
-    public partial class Index
+    public partial class CotizarProducto
     {
 
         /// <summary>
@@ -24,30 +24,21 @@ namespace PRUEBA_TECNICA_IMOVS
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control gvProductos.
+        /// Control ddlProductos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvProductos;
+        protected global::System.Web.UI.WebControls.DropDownList ddlProductos;
 
         /// <summary>
-        /// Control btnAgregar.
+        /// Control txtCantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregar;
-
-        /// <summary>
-        /// Control btnCotizar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCotizar;
+        protected global::System.Web.UI.WebControls.TextBox txtCantidad;
     }
 }

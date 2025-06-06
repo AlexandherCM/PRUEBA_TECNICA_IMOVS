@@ -7,6 +7,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.Entity;
+using PRUEBA_TECNICA_IMOVS.Models;
 
 namespace PRUEBA_TECNICA_IMOVS
 {
@@ -20,16 +22,22 @@ namespace PRUEBA_TECNICA_IMOVS
 
         private void CargarProductos()
         {
-            string connStr = ConfigurationManager.ConnectionStrings["dbConexion"].ConnectionString;
-            using (SqlConnection conn = new SqlConnection(connStr))
+            using (var context = new Context())
             {
-                string query = "SELECT IdProducto, NombreProducto, Precio, Stock, Estatus, TipoProducto FROM Productos";
-                SqlDataAdapter da = new SqlDataAdapter(query, conn);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                gvProductos.DataSource = dt;
+                var productos = context.Productos.ToList();
+                gvProductos.DataSource = productos;
                 gvProductos.DataBind();
             }
+        }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Views/AgregarProducto.aspx");
+        }
+
+        protected void btnCotizar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Views/CotizarProducto.aspx");
         }
     }
 }
