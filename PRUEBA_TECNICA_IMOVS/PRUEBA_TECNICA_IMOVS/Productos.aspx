@@ -6,6 +6,7 @@
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container mt-4">
         <h2>Gestión de Productos</h2>
+
         <p>Aquí podrás ver, agregar, editar y eliminar productos.</p>
 
         <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#productModal" onclick="clearProductForm()">

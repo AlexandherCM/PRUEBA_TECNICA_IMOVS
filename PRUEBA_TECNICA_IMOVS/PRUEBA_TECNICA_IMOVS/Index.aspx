@@ -9,8 +9,8 @@
             <h1 class="display-5 fw-bold">PRUEBA TÉCNICA, COTIZACIÓN DE COMPRA DE PRODUCTOS</h1>
             <p class="col-md-8 fs-4">Bienvenido al sistema de gestión de productos y cotizaciones. Utiliza los enlaces a continuación o el menú de navegación para comenzar.</p>
             <p>
-                <a href="Views/Productos.aspx" class="btn btn-primary btn-lg me-2">Gestionar Productos &raquo;</a>
-                <a href="Views/Cotizaciones.aspx" class="btn btn-success btn-lg">Crear y Gestionar Cotizaciones &raquo;</a>
+                <a href="/Productos.aspx" class="btn btn-primary btn-lg me-2">Gestionar Productos &raquo;</a>
+                <a href="/Cotizaciones.aspx" class="btn btn-success btn-lg">Crear y Gestionar Cotizaciones &raquo;</a>
             </p>
         </div>
     </div>
@@ -21,7 +21,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Gestión de Productos</h5>
                     <p class="card-text">Administra tus productos, precios, stock y estado (activo/inactivo) para que estén disponibles en tus cotizaciones.</p>
-                    <a href="Views/Productos.aspx" class="btn btn-outline-secondary">Ir a Productos &raquo;</a>
+                    <a href="/Productos.aspx" class="btn btn-outline-secondary">Ir a Productos &raquo;</a>
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Creación de Cotizaciones</h5>
                     <p class="card-text">Genera cotizaciones para clientes, selecciona productos, gestiona cantidades, calcula totales e IVA, y confirma ventas.</p>
-                    <a href="Views/Cotizaciones.aspx" class="btn btn-outline-secondary">Ir a Cotizaciones &raquo;</a>
+                    <a href="/Cotizaciones.aspx" class="btn btn-outline-secondary">Ir a Cotizaciones &raquo;</a>
                 </div>
             </div>
         </div>
