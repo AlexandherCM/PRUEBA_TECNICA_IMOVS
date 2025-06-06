@@ -51,33 +51,6 @@ namespace PRUEBA_TECNICA_IMOVS.Views
         protected global::System.Web.UI.WebControls.GridView gvDetallesCotizacion;
 
         /// <summary>
-        /// Control lblSubtotalCotizacion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSubtotalCotizacion;
-
-        /// <summary>
-        /// Control lblIVACotizacion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblIVACotizacion;
-
-        /// <summary>
-        /// Control lblTotalConIVACotizacion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotalConIVACotizacion;
-
-        /// <summary>
         /// Control btnGuardarCotizacion.
         /// </summary>
         /// <remarks>

@@ -30,7 +30,7 @@
                 <div class="table-responsive">
                     <asp:GridView ID="gvDetallesCotizacion" runat="server"
                         CssClass="table table-bordered table-sm"
-                        AutoGenerateColumns="False" ShowFooter="True" OnRowDeleting="gvDetallesCotizacion_RowDeleting">
+                        AutoGenerateColumns="False" ShowFooter="True" OnRowDeleting="gvDetallesCotizacion_RowDeleting" OnRowDataBound="gvDetallesCotizacion_RowDataBound">
                         <Columns>
                             <asp:BoundField DataField="Producto.Nombre" HeaderText="Producto" />
                             <asp:BoundField DataField="Producto.PrecioUnitario" HeaderText="Precio Unitario" DataFormatString="{0:C}" />
@@ -43,23 +43,6 @@
                             </asp:TemplateField>
                         </Columns>
                         <FooterStyle Font-Bold="True" />
-                        <FooterTemplate>
-                            <tr>
-                                <td colspan="3" class="text-end"><strong>Subtotal Cotización:</strong></td>
-                                <td class="text-end"><asp:Label ID="lblSubtotalCotizacion" runat="server"></asp:Label></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td colspan="3" class="text-end"><strong>IVA (16%):</strong></td>
-                                <td class="text-end"><asp:Label ID="lblIVACotizacion" runat="server"></asp:Label></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td colspan="3" class="text-end"><strong>Total con IVA:</strong></td>
-                                <td class="text-end"><asp:Label ID="lblTotalConIVACotizacion" runat="server"></asp:Label></td>
-                                <td></td>
-                            </tr>
-                        </FooterTemplate>
                     </asp:GridView>
                 </div>
 
@@ -135,11 +118,10 @@
     </div>
 
     <script type="text/javascript">
-        
         function showDetalleCotizacionModal(cotizacionId) {
             $.ajax({
                 type: "POST",
-                url: "Cotizaciones.aspx/GetCotizacionDetails", 
+                url: "Cotizaciones.aspx/GetCotizacionDetails",
                 data: JSON.stringify({ cotizacionId: cotizacionId }),
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -152,7 +134,6 @@
                         $('#lblModalSubtotal').text(cotizacion.TotalSinIVA.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }));
                         $('#lblModalIVA').text(cotizacion.IVA.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }));
                         $('#lblModalTotal').text(cotizacion.TotalConIVA.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' }));
-
 
                         var detalleModal = new bootstrap.Modal(document.getElementById('detalleCotizacionModal'));
                         detalleModal.show();
