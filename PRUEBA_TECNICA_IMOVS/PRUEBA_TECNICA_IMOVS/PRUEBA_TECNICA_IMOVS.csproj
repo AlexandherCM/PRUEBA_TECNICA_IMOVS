@@ -129,9 +129,14 @@
     <Compile Include="Migrations\202506061853520_CrearTablas.Designer.cs">
       <DependentUpon>202506061853520_CrearTablas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202506062107089_AddDetalleCotizacion.cs" />
+    <Compile Include="Migrations\202506062107089_AddDetalleCotizacion.Designer.cs">
+      <DependentUpon>202506062107089_AddDetalleCotizacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\Entities\Cotizacion.cs" />
+    <Compile Include="Models\Entities\DetalleCotizacion.cs" />
     <Compile Include="Models\Entities\Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\AgregarProducto.aspx.cs">
@@ -165,6 +170,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202506061853520_CrearTablas.resx">
       <DependentUpon>202506061853520_CrearTablas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506062107089_AddDetalleCotizacion.resx">
+      <DependentUpon>202506062107089_AddDetalleCotizacion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
