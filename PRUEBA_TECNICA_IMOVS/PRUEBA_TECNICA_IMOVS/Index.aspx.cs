@@ -21,7 +21,7 @@ namespace PRUEBA_TECNICA_IMOVS
 
         protected void btnCotizacion_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Views/Cotizacion.aspx");
+            Response.Redirect("Views/Cotizaciones.aspx");
         }
     }
 }

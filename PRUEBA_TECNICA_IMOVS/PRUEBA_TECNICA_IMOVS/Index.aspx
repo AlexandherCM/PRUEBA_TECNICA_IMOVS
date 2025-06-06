@@ -48,7 +48,7 @@
 
             <div class="button-container">
                 <a class="nav-button" href="Views/Producto.aspx">Gestión de Productos</a>
-                <a class="nav-button" href="Views/Cotizacion.aspx">Crear Cotización</a>
+                <a class="nav-button" href="Views/Cotizaciones.aspx">Crear Cotización</a>
             </div>
         </div>
     </form>

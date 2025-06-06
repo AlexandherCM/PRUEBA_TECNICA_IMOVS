@@ -17,7 +17,7 @@ namespace PRUEBA_TECNICA_IMOVS.Views
         {
             using (var db = new Context())
             {
-                var nuevo = new Producto
+                var nuevo = new Models.Entities.Producto
                 {
                     Nombre = txtNombre.Text,
                     Tipo = txtTipo.Text,
