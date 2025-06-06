@@ -25,11 +25,11 @@ namespace PRUEBA_TECNICA_IMOVS.Models.Entities
         
         public decimal TotalConIVA { get; set; }
 
-        public virtual ICollection<DetalleCotizacion> Detalles { get; set; }
+        public virtual ICollection<DetallesCotizacion> Detalles { get; set; }
 
         public Cotizacion()
         {
-            Detalles = new HashSet<DetalleCotizacion>();
+            Detalles = new HashSet<DetallesCotizacion>();
         }
     }
 }

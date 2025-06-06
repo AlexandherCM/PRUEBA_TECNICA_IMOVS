@@ -15,7 +15,7 @@ namespace PRUEBA_TECNICA_IMOVS.Models
 
         public DbSet<Producto> Productos { get; set; }
         public DbSet<Cotizacion> Cotizaciones { get; set; }
-        public DbSet<DetalleCotizacion> DetallesCotizacion { get; set; }
+        public DbSet<DetallesCotizacion> DetallesCotizacion { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
