@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using PRUEBA_TECNICA_IMOVS.DTOs;
 
-namespace PRUEBA_TECNICA_IMOVS.Interfaces.Services // Ajusta el namespace
+namespace PRUEBA_TECNICA_IMOVS.Interfaces.Services
 {
     public interface IServicesEntidadEjem
     {

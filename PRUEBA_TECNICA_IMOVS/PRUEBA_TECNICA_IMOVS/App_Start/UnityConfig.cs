@@ -1,12 +1,6 @@
-// En App_Start/UnityConfig.cs
-
 using System.Web.Http;
 using Unity;
-using Unity.WebApi; // ESTE ES EL USING CRÍTICO para la integración de Web API
-
-// Ya NO NECESITAS este using:
-// using Unity.Lifetime; // ¡QUITA ESTA LÍNEA!
-
+using Unity.WebApi; 
 using PRUEBA_TECNICA_IMOVS.Models; 
 using PRUEBA_TECNICA_IMOVS.Interfaces; 
 using PRUEBA_TECNICA_IMOVS.Repositories; 

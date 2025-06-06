@@ -45,7 +45,7 @@ namespace PRUEBA_TECNICA_IMOVS.Services
 
             if (!saved)
             {
-                return null; // O lanza una excepción específica
+                return null;
             }
 
             return _mapper.Map<EntidadEjemploReadDto>(entidad);
@@ -59,7 +59,7 @@ namespace PRUEBA_TECNICA_IMOVS.Services
                 return false;
             }
 
-            _mapper.Map(entidadDto, entidadExistente); // Actualiza propiedades del existente
+            _mapper.Map(entidadDto, entidadExistente); 
 
             _entidadEjemRepository.Update(entidadExistente);
             return await _entidadEjemRepository.SaveChangesAsync();
