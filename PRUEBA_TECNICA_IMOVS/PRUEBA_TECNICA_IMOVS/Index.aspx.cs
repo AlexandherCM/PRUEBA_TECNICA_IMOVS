@@ -11,6 +11,8 @@ namespace PRUEBA_TECNICA_IMOVS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Redirige automáticamente a la vista que quieres mostrar
+            Response.Redirect("~/Views/Cotizaciones.aspx");
 
         }
     }
