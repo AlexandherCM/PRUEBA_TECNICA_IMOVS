@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers; // Necesario para MediaTypeHeaderValue
 using System.Web.Http;
 
 namespace PRUEBA_TECNICA_IMOVS
@@ -9,9 +10,6 @@ namespace PRUEBA_TECNICA_IMOVS
     {
         public static void Register(HttpConfiguration config)
         {
-            // Configuración y servicios de Web API
-
-            // Rutas de Web API
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
@@ -19,6 +17,8 @@ namespace PRUEBA_TECNICA_IMOVS
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
+            config.Formatters.JsonFormatter.SupportedMediaTypes.Remove(config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml"));
         }
     }
 }
