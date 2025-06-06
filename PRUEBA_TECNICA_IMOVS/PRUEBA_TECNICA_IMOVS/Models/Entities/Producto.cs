@@ -31,6 +31,6 @@ namespace PRUEBA_TECNICA_IMOVS.Models.Entities
 
         public bool Estatus { get; set; }
 
-        public virtual ICollection<DetalleCotizacion> DetallesCotizacion { get; set; }
+        public virtual ICollection<DetallesCotizacion> DetallesCotizacion { get; set; }
     }
 }
