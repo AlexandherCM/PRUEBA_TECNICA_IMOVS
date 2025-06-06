@@ -9,10 +9,24 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <h1>PRUEBA TÉCNICA, COTIZACIÓN DE COMPRA DE PRODUCTOS</h1>
-            <h3>En esta vista coloca las redirecciones que requieras.</h3>
-        </div>
-    </form>
+    <div style="text-align:center;">
+        <div class="titulo">Productos Registrados</div>
+
+        <asp:GridView ID="gvProductos" runat="server" AutoGenerateColumns="False" BorderWidth="1px" BorderColor="#ccc" Width="80%" HorizontalAlign="Center">
+            <Columns>
+                <asp:BoundField DataField="IdProducto" HeaderText="ID" />
+                <asp:BoundField DataField="NombreProducto" HeaderText="Nombre" />
+                <asp:BoundField DataField="Precio" HeaderText="Precio" DataFormatString="{0:C}" />
+                <asp:BoundField DataField="Stock" HeaderText="Stock" />
+                <asp:BoundField DataField="TipoProducto" HeaderText="Tipo" />
+                <asp:BoundField DataField="Estatus" HeaderText="Activo" />
+            </Columns>
+        </asp:GridView>
+
+        <br />
+        <a class="btn-link" href="Views/AgregarProducto.aspx">Agregar Producto</a>
+        <a class="btn-link" href="Views/Cotizar.aspx">Realizar Cotización</a>
+    </div>
+</form>
 </body>
 </html>
