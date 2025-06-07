@@ -1,14 +1,14 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CrearCotizacion.aspx.cs" Inherits="PRUEBA_TECNICA_IMOVS.Views.CrearCotizacion" %>
+Ôªø<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CrearCotizacion.aspx.cs" Inherits="PRUEBA_TECNICA_IMOVS.Views.CrearCotizacion" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Crear CotizaciÛn</title>
+    <title>Crear Cotizaci√≥n</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
-        <h2>Crear CotizaciÛn</h2>
+        <h2>Crear Cotizaci√≥n</h2>
 
         <label>Producto:</label>
         <select id="productoSelect"></select>
@@ -36,7 +36,7 @@
         <h3>Subtotal (sin IVA): $<span id="subtotal">0.00</span></h3>
         <h3>IVA (16%): $<span id="iva">0.00</span></h3>
         <h3>Total: $<span id="total">0.00</span></h3>
-        <button type="button" id="guardarBtn">Guardar CotizaciÛn</button>
+        <button type="button" id="guardarBtn">Guardar Cotizaci√≥n</button>
 
     </form>
 
@@ -51,7 +51,7 @@
             $('#agregarBtn').click(function () {
                 const id = parseInt($('#productoSelect').val());
                 const cantidad = parseInt($('#cantidadInput').val());
-                if (!id || !cantidad || cantidad <= 0) return alert("Selecciona un producto y cantidad v·lida.");
+                if (!id || !cantidad || cantidad <= 0) return alert("Selecciona un producto y cantidad v√°lida.");
 
                 const producto = productos.find(p => p.Id === id);
                 if (!producto) return;
@@ -128,8 +128,8 @@
                 contentType: 'application/json',
                 data: JSON.stringify(cotizacion),
                 success: function (res) {
-                    alert(res.mensaje || "CotizaciÛn guardada");
-                    location.reload(); // o redirigir a otra p·gina
+                    alert(res.mensaje || "Cotizaci√≥n guardada");
+                    location.reload(); // o redirigir a otra p√°gina
                 },
                 error: function (xhr) {
                     alert("Error al guardar: " + xhr.responseText);
@@ -140,4 +140,3 @@
     </script>
 </body>
 </html>
-

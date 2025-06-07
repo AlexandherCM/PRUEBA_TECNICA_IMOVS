@@ -124,6 +124,13 @@
       <DependentUpon>Cotizaciones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Views\CrearCotizacion.aspx.cs">
+      <DependentUpon>CrearCotizacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CrearCotizacion.aspx.designer.cs">
+      <DependentUpon>CrearCotizacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

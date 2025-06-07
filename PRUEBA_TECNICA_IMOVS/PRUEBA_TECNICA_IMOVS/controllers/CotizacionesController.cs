@@ -14,18 +14,44 @@ namespace PRUEBA_TECNICA_IMOVS.Controllers
         private readonly Context db = new Context();
 
         // GET api/cotizaciones
-        public async Task<IEnumerable<Cotizacion>> Get()
+        //public async Task<IEnumerable<Cotizacion>> Get()
+        //{
+        //    var data = await db.Cotizaciones.Include(c => c.Detalles).ToListAsync();
+        //    return data;
+        //}
+
+        //protected override void Dispose(bool disposing)
+        //{
+        //    if (disposing)
+        //        db.Dispose();
+
+        //    base.Dispose(disposing);
+        //}
+
+        public async Task<IHttpActionResult> Get()
         {
-            return await db.Cotizaciones.Include(c => c.Detalles).ToListAsync();
+            var cotizacionesData = await db.Cotizaciones
+                                           .Include(c => c.Detalles)
+                                           .ToListAsync();
+
+            var cotizaciones = cotizacionesData.Select(c => new
+            {
+                c.Id,
+                c.Fecha,
+                c.Estado,
+                Detalles = c.Detalles.Select(d => new
+                {
+                    d.Id,
+                    d.ProductoId,
+                    d.Cantidad,
+                    d.PrecioUnitario,
+                    PrecioTotal = d.PrecioTotal
+                }).ToList()
+            });
+
+            return Ok(cotizaciones);
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-                db.Dispose();
-
-            base.Dispose(disposing);
-        }
 
         [HttpPost]
         public async Task<IHttpActionResult> PostCotizacion(Cotizacion cotizacion)

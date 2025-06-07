@@ -7,7 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(function () {
-            $.getJSON('/api/cotizaciones', function (data) {
+            $.getJSON('/api/Cotizaciones', function (data) {
                 let html = '<table border="1"><thead><tr><th>Id</th><th>Fecha</th><th>Estado</th><th>Detalles</th></tr></thead><tbody>';
                 data.forEach(c => {
                     html += `<tr>
