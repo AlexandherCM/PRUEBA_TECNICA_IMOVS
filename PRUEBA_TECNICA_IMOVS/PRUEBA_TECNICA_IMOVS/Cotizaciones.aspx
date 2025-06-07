@@ -30,21 +30,49 @@
                 <div class="table-responsive">
                     <asp:GridView ID="gvDetallesCotizacion" runat="server"
                         CssClass="table table-bordered table-sm"
-                        AutoGenerateColumns="False" ShowFooter="True" OnRowDeleting="gvDetallesCotizacion_RowDeleting" OnRowDataBound="gvDetallesCotizacion_RowDataBound">
+                        AutoGenerateColumns="False" ShowFooter="True"
+                        OnRowDeleting="gvDetallesCotizacion_RowDeleting"
+                        OnRowDataBound="gvDetallesCotizacion_RowDataBound">
+
                         <Columns>
                             <asp:BoundField DataField="Producto.Nombre" HeaderText="Producto" />
                             <asp:BoundField DataField="Producto.PrecioUnitario" HeaderText="Precio Unitario" DataFormatString="{0:C}" />
                             <asp:BoundField DataField="Cantidad" HeaderText="Cantidad" />
                             <asp:BoundField DataField="Subtotal" HeaderText="Total Línea" DataFormatString="{0:C}" />
+
                             <asp:TemplateField HeaderText="Acciones">
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="btnEliminarDetalle" runat="server" CommandName="Delete" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-sm btn-danger">Eliminar</asp:LinkButton>
+                                    <asp:LinkButton ID="btnEliminarDetalle" runat="server" CommandName="Delete"
+                                        CommandArgument='<%# Container.DataItemIndex %>'
+                                        CssClass="btn btn-sm btn-danger">Eliminar</asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
+
+                            <%-- Footer columns --%>
+                            <asp:TemplateField HeaderText="Subtotal (Footer)">
+                                <FooterTemplate>
+                                    <asp:Label ID="lblSubtotalCotizacion" runat="server" Text=""></asp:Label>
+                                </FooterTemplate>
+                            </asp:TemplateField>
+
+                            <asp:TemplateField HeaderText="IVA (Footer)">
+                                <FooterTemplate>
+                                    <asp:Label ID="lblIVACotizacion" runat="server" Text=""></asp:Label>
+                                </FooterTemplate>
+                            </asp:TemplateField>
+
+                            <asp:TemplateField HeaderText="Total con IVA (Footer)">
+                                <FooterTemplate>
+                                    <asp:Label ID="lblTotalConIVACotizacion" runat="server" Text=""></asp:Label>
+                                </FooterTemplate>
+                            </asp:TemplateField>
                         </Columns>
+
+
                         <FooterStyle Font-Bold="True" />
                     </asp:GridView>
                 </div>
+
 
                 <div class="mt-3 text-end">
                     <asp:Button ID="btnGuardarCotizacion" runat="server" Text="Guardar Cotización" CssClass="btn btn-primary me-2" OnClick="btnGuardarCotizacion_Click" />
@@ -71,7 +99,7 @@
                         <asp:TemplateField HeaderText="Acciones">
                             <ItemTemplate>
                                 <asp:LinkButton ID="btnVerDetalles" runat="server" CommandName="VerDetalles" CommandArgument='<%# Eval("Id") %>' CssClass="btn btn-sm btn-info me-1">Ver Detalles</asp:LinkButton>
-                                <asp:LinkButton ID="btnConfirmarVentaGrid" runat="server" CommandName="ConfirmarVentaGrid" CommandArgument='<%# Eval("Id") %>' CssClass="btn btn-sm btn-success" OnClientClick="return confirm('¿Estás seguro de que quieres confirmar esta cotización como venta? Esto actualizará el stock de los productos.');" Visible='<%# !(bool)Eval("Confirmada") %>' >Confirmar Venta</asp:LinkButton>
+                                <asp:LinkButton ID="btnConfirmarVentaGrid" runat="server" CommandName="ConfirmarVentaGrid" CommandArgument='<%# Eval("Id") %>' CssClass="btn btn-sm btn-success" OnClientClick="return confirm('¿Estás seguro de que quieres confirmar esta cotización como venta? Esto actualizará el stock de los productos.');" Visible='<%# !(bool)Eval("Confirmada") %>'>Confirmar Venta</asp:LinkButton>
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>

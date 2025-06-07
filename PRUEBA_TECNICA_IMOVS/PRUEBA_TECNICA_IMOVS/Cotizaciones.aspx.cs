@@ -314,5 +314,10 @@ namespace PRUEBA_TECNICA_IMOVS.Views
                 }
             }
         }
+
+        protected void gvDetallesCotizacion_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+
+        }
     }
 }
